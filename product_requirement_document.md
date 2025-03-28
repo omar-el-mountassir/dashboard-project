@@ -58,6 +58,56 @@ L'image représente un tableau de bord (dashboard) avec un design sombre moderne
 8. **Graphique de tendance** - Visualisation de l'évolution d'une métrique financière
 9. **Système de recherche** - Fonctionnalité de recherche dans le dashboard
 
+## Analyse de priorité des fonctionnalités
+
+### Méthode MoSCoW
+
+**Must Have (Doit avoir absolument)**
+- Navigation latérale (1) - Structure fondamentale de l'interface
+- Graphique principal (2) - Élément central et le plus visible du dashboard
+- Tableau des commandes (5) - Données opérationnelles cruciales
+
+**Should Have (Devrait avoir)**
+- KPI circulaire (3) - Élément important pour la vision globale des performances
+- Indicateurs de performance (4) - Contextualise les données pour les décideurs
+- Widgets de produits (7) - Donne une vue d'ensemble de la distribution des produits
+
+**Could Have (Pourrait avoir)**
+- Graphique à barres hebdomadaire (6) - Utile mais secondaire
+- Graphique de tendance (8) - Complète l'information mais non essentiel
+
+**Won't Have (N'aura pas pour l'instant)**
+- Système de recherche (9) - Peut être ajouté dans une itération future
+
+### Méthode RICE
+
+| # | Fonctionnalité | Reach (1-10) | Impact (0.25-3) | Confidence (0-100%) | Effort (jours) | Score RICE | Priorité |
+|---|----------------|--------------|-----------------|---------------------|----------------|------------|----------|
+| 1 | Navigation latérale | 10 | 1 | 100% | 1 | 10 | 2 |
+| 2 | Graphique principal | 10 | 3 | 90% | 2 | 13.5 | 1 |
+| 3 | KPI circulaire | 8 | 2 | 80% | 1 | 12.8 | 3 |
+| 4 | Indicateurs de performance | 7 | 2 | 90% | 0.5 | 25.2 | 4 |
+| 5 | Tableau des commandes | 9 | 2 | 100% | 1.5 | 12 | 5 |
+| 6 | Graphique à barres hebdo | 6 | 1 | 80% | 1 | 4.8 | 7 |
+| 7 | Widgets de produits | 7 | 1.5 | 90% | 1.5 | 6.3 | 6 |
+| 8 | Graphique de tendance | 5 | 1 | 70% | 0.5 | 7 | 8 |
+| 9 | Système de recherche | 4 | 0.5 | 50% | 1.5 | 0.67 | 9 |
+
+**Formule RICE** : (Reach × Impact × Confidence) / Effort
+
+### Conclusion de l'analyse
+
+**Ordre d'implémentation final (basé sur l'analyse combinée):**
+1. **Graphique principal (Area Chart)** - Élément central avec le score RICE le plus élevé
+2. **Navigation latérale** - Structure fondamentale de l'application
+3. **KPI circulaire** - Indicateur de performance critique
+4. **Indicateurs de performance** - Complément au KPI avec un bon rapport effort/impact
+5. **Tableau des commandes** - Données opérationnelles importantes
+6. **Widgets de produits** - Vue d'ensemble des produits
+7. **Graphique à barres hebdomadaire** - Visualisation complémentaire
+8. **Graphique de tendance** - Information additionnelle
+9. **Système de recherche** - Fonctionnalité avancée à implémenter plus tard
+
 ## Spécifications Techniques Proposées
 
 ### Framework et langage
